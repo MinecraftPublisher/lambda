@@ -1,0 +1,8 @@
+[package]
+name = "lambda"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+pest_derive = "2.7.9"
+untwine = "0.3.1"

@@ -1,0 +1,8 @@
+lambda = { (variable | function | application) }
+
+function = { ("lambda" | "\\") ~ variable ~ ("." | ":") ~ lambda }
+application = { "(" ~ lambda ~ lambda ~ ")" }
+variable = @{ ('a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | "$" | "_")+ }
+
+sep = _{ WHITESPACE? }
+WHITESPACE = _{ (NEWLINE | "\t" | " ")+ }
